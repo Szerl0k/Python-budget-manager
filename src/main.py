@@ -1,7 +1,14 @@
-from datetime import datetime, timedelta
-import os.path
+from src.console import Console
+from utils.data_generator import generate_example_json
+from utils.serialization_handler import SerializationHandler
 
-from src.utils import SerializationHandler
-from src.models import Transaction, CATEGORIES, BudgetManager
+
+
+
+console = Console()
+
+console.run()
+
+
 
 
