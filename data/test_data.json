@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "date": "2025-03-22",
+    "category": "Pensja",
+    "amount": 1304.05,
+    "description": "Cos"
+  },
+  {
+    "id": 2,
+    "date": "2025-03-31",
+    "category": "Rozrywka",
+    "amount": 647.8,
+    "description": "Cos"
+  },
+  {
+    "id": 3,
+    "date": "2025-04-19",
+    "category": "Mieszkanie",
+    "amount": 1098.46,
+    "description": "Cos"
+  },
+  {
+    "id": 4,
+    "date": "2025-05-09",
+    "category": "Mieszkanie",
+    "amount": 1287.53,
+    "description": "Cos"
+  },
+  {
+    "id": 5,
+    "date": "2025-04-22",
+    "category": "Pensja",
+    "amount": 361.66,
+    "description": "Cos"
+  },
+  {
+    "id": 6,
+    "date": "2025-05-10",
+    "category": "Mieszkanie",
+    "amount": 1396.8,
+    "description": "Cos"
+  },
+  {
+    "id": 7,
+    "date": "2025-04-17",
+    "category": "Zywnosc",
+    "amount": 903.69,
+    "description": "Cos"
+  },
+  {
+    "id": 8,
+    "date": "2025-03-16",
+    "category": "Transport",
+    "amount": -12.27,
+    "description": "Cos"
+  },
+  {
+    "id": 9,
+    "date": "2025-04-25",
+    "category": "Transport",
+    "amount": 1486.75,
+    "description": "Cos"
+  },
+  {
+    "id": 10,
+    "date": "2025-05-16",
+    "category": "Restauracja",
+    "amount": 1827.44,
+    "description": "Cos"
+  }
+]
