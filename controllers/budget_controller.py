@@ -12,7 +12,8 @@ class BudgetController:
         self.transactions = self._sh.deserialize()
 
     def save_transactions(self):
-        self._sh.serialize(self.transactions)
+        self._sh.serialize(self._transactions)
+        self._transactions = self._sh.deserialize()
 
     def get_transaction_file_path(self):
         return self._sh.path
@@ -36,6 +37,8 @@ class BudgetController:
 
     @property
     def transactions(self):
+        if self._transactions is None:
+            return None
         return self._transactions
 
     @transactions.setter
@@ -43,11 +46,15 @@ class BudgetController:
         self._transactions = value
 
     def add_transaction(self, transaction: Transaction):
-        self.transactions[transaction.id] = transaction
+        self.transactions.append(transaction)
         self.save_transactions()
 
     def remove_transaction(self, id: int):
-        self.transactions.pop(id)
+
+        if not any(t.id == id for t in self.transactions):
+            raise ValueError(f"Transakcja o id {id} nie istnieje")
+
+        self.transactions = [t for t in self.transactions if t.id != id]
         self.save_transactions()
 
     def edit_transaction(self,transaction: Transaction):

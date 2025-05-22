@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "date": "2020-12-12",
+    "category": "Inne",
+    "amount": 1000.0,
+    "description": "oamso",
+    "is_euro": true
+  },
+  {
+    "id": 2,
+    "date": "2020-12-12",
+    "category": "Inne",
+    "amount": 121212.0,
+    "description": "aasasas",
+    "is_euro": false
+  }
+]

@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "date": "2025-04-15",
+    "category": "Wynagrodzenie",
+    "amount": 1575.02,
+    "description": "Empty",
+    "is_euro": true
+  },
+  {
+    "id": 2,
+    "date": "2025-04-05",
+    "category": "Samochod",
+    "amount": -1986.62,
+    "description": "Empty",
+    "is_euro": true
+  },
+  {
+    "id": 3,
+    "date": "2025-03-07",
+    "category": "Restauracja",
+    "amount": -1009.39,
+    "description": "Empty",
+    "is_euro": false
+  },
+  {
+    "id": 4,
+    "date": "2025-04-04",
+    "category": "Wynagrodzenie",
+    "amount": 290.7,
+    "description": "Empty",
+    "is_euro": false
+  },
+  {
+    "id": 5,
+    "date": "2025-03-05",
+    "category": "Wynagrodzenie",
+    "amount": 1177.32,
+    "description": "Empty",
+    "is_euro": false
+  },
+  {
+    "id": 6,
+    "date": "2025-02-21",
+    "category": "Transport",
+    "amount": -1708.21,
+    "description": "Empty",
+    "is_euro": true
+  },
+  {
+    "id": 7,
+    "date": "2025-03-08",
+    "category": "Wynagrodzenie",
+    "amount": 137.76,
+    "description": "Empty",
+    "is_euro": false
+  },
+  {
+    "id": 8,
+    "date": "2025-04-22",
+    "category": "Restauracja",
+    "amount": -1207.72,
+    "description": "Empty",
+    "is_euro": true
+  },
+  {
+    "id": 9,
+    "date": "2025-04-30",
+    "category": "Wynagrodzenie",
+    "amount": 114.64,
+    "description": "Empty",
+    "is_euro": false
+  },
+  {
+    "id": 10,
+    "date": "2025-02-24",
+    "category": "Rozrywka",
+    "amount": -889.11,
+    "description": "Empty",
+    "is_euro": true
+  },
+  {
+    "id": 11,
+    "date": "2020-10-12",
+    "category": "Inne",
+    "amount": 1000.0,
+    "description": "sasas",
+    "is_euro": false
+  }
+]

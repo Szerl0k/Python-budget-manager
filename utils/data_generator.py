@@ -5,7 +5,7 @@ from datetime import datetime, timedelta
 
 from models.transaction import Transaction, CATEGORIES
 
-def generate_example_json(path: str="data/example_data.json", count: int = 10):
+def generate_example_json(path: str="data/test_data.json", count: int = 10):
     if os.path.isfile("path"):
         print(f"{path} already exists")
     else:
