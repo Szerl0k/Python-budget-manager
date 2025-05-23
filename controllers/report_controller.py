@@ -1,22 +1,7 @@
-from controllers.budget_controller import BudgetController
+from utils.serialization_handler import SerializationHandler
 
-class ReportService:
-    def __init__(self, budget: BudgetController):
-        self._budget = budget
-        self._transactions = self._budget.transactions
 
-    def get_monthly_report(self, month: int, year: int):
-        result = dict()
-        for k,v in self._transactions.items():
-            if v.date.month == month and v.date.year == year:
-                result[k] = v
+def generate_report(transactions: list, report_name: str):
 
-        return result
-
-    def get_yearly_report(self, year: int):
-        result = dict()
-        for k,v in self._transactions.items():
-            if v.date.year == year:
-                result[k] = v
-
-        return result
+    serialization_handler = SerializationHandler("reports/"+report_name)
+    serialization_handler.serialize(transactions, flag="report")

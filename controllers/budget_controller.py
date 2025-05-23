@@ -1,3 +1,4 @@
+import datetime
 from models.transaction import Transaction
 from utils.serialization_handler import SerializationHandler
 
@@ -5,10 +6,10 @@ from utils.serialization_handler import SerializationHandler
 class BudgetController:
     def __init__(self):
         self.transactions = None
-        self._sh = SerializationHandler()
+        self._sh = SerializationHandler("data/")
 
     def load_transactions(self, path):
-        self._sh.path = path
+        self._sh = SerializationHandler("data/"+path)
         self.transactions = self._sh.deserialize()
 
     def save_transactions(self):
@@ -35,6 +36,12 @@ class BudgetController:
 
         return f"{round(pln_sum,2)} PLN, {round(eur_sum,2)} EUR"
 
+    def get_min_amount(self):
+        return min(t.amount for t in self.transactions)
+
+    def get_max_amount(self):
+        return max(t.amount for t in self.transactions)
+
     @property
     def transactions(self):
         if self._transactions is None:
@@ -57,11 +64,40 @@ class BudgetController:
         self.transactions = [t for t in self.transactions if t.id != id]
         self.save_transactions()
 
-    def edit_transaction(self,transaction: Transaction):
-        if self.transactions.__contains__(transaction.id):
-            self.transactions[transaction.id] = transaction
+    def edit_transaction(
+            self,
+            id:int,
+            date:datetime,
+            category: str,
+            amount:float,
+            description: str,
+            is_euro:bool,
+    ):
+
+        transaction = next((t for t in self.transactions if t.id == id), None)
+
+        # walidacja id już zachodzi w widoku, ale w razie czego tutaj też niech będzie
+        if transaction is None:
+            raise ValueError("Coś poszło nie tak")
+
+        if date is not None:
+            transaction.date = date
+
+        if category is not None:
+            transaction.category = category
+
+        if amount is not None:
+            transaction.amount = amount
+
+        if description is not None:
+            transaction.description = description
+
+        if is_euro is not None:
+            transaction.is_euro = is_euro
 
         self.save_transactions()
+
+        return [t for t in self.transactions if t.id == id]
 
 
 

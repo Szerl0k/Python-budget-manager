@@ -1,3 +1,4 @@
+from datetime import datetime
 import json
 import os
 from json import JSONDecodeError
@@ -15,7 +16,7 @@ class SerializationHandler:
 
     @path.setter
     def path(self, path: str):
-        self._path = "data/"+path
+        self._path = path
 
 
     def deserialize(self):
@@ -35,10 +36,26 @@ class SerializationHandler:
             result.append(Transaction.from_json(t))
         return result
 
-    def serialize(self, data: list):
+    def serialize(self, data: list, flag="json"):
 
-        # Mapujemy każdą transakcję jako dict
-        data = [t.to_dict() for t in data]
+        if flag == "report":
+            with open(self.path, "w") as outfile:
+                outfile.write(f"""
+========================================== Raport Transakcji ==========================================
+Data wygenerowania: {datetime.now().strftime("%d/%m/%Y %H:%M")}
+-------------------------------------------------------------------------------------------------------
+                """)
+                for t in data:
+                    outfile.write(f"""
+{t.__str__()}""")
+                outfile.write(f"""
+============================================ Koniec raportu ============================================
+""")
 
-        with open(self.path, "w") as outfile:
-            json.dump(data, outfile, indent=2)
+
+        else:
+            # Mapujemy każdą transakcję jako dict
+            data = [t.to_dict() for t in data]
+
+            with open(self.path, "w") as outfile:
+                json.dump(data, outfile, indent=2)
