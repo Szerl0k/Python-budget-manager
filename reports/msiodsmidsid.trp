@@ -1,0 +1,48 @@
+
+========================================== Raport Transakcji ==========================================
+Data wygenerowania: 22/06/2025 09:03
+-------------------------------------------------------------------------------------------------------
+                
+
+Transaction 2
+date: 2025-02-22 00:00:00, category: "Samochod" amount: -1675.91 EUR
+description: 
+Empty
+
+
+Transaction 4
+date: 2025-04-16 00:00:00, category: "Samochod" amount: -1366.73 EUR
+description: 
+Empty
+
+
+Transaction 13
+date: 2025-03-29 00:00:00, category: "Samochod" amount: -311.06 EUR
+description: 
+Empty
+
+
+Transaction 47
+date: 2025-03-28 00:00:00, category: "Samochod" amount: -599.63 EUR
+description: 
+Empty
+
+
+Transaction 57
+date: 2025-04-03 00:00:00, category: "Samochod" amount: -437.75 EUR
+description: 
+Empty
+
+
+Transaction 62
+date: 2025-04-30 00:00:00, category: "Samochod" amount: -770.86 EUR
+description: 
+Empty
+
+
+Transaction 102
+date: 2025-11-11 00:00:00, category: "Samochod" amount: 100.0 EUR
+description: 
+Jakas transkacja
+
+============================================ Koniec raportu ============================================

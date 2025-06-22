@@ -806,5 +806,13 @@
     "amount": 1000.0,
     "description": "test serialize",
     "is_euro": true
+  },
+  {
+    "id": 102,
+    "date": "2025-11-11",
+    "category": "Samochod",
+    "amount": 100.0,
+    "description": "Jakas transkacja",
+    "is_euro": true
   }
 ]

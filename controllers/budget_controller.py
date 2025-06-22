@@ -6,10 +6,10 @@ from utils.serialization_handler import SerializationHandler
 class BudgetController:
     def __init__(self):
         self.transactions = None
-        self._sh = SerializationHandler("data/")
+        self._sh = SerializationHandler("../data/")
 
     def load_transactions(self, path):
-        self._sh = SerializationHandler("data/"+path)
+        self._sh = SerializationHandler("../data/"+path)
         self.transactions = self._sh.deserialize()
 
     def save_transactions(self):

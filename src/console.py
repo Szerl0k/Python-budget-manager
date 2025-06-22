@@ -81,7 +81,7 @@ Dostępne środki {self._bc.get_funds()}
 
     def _load_budget(self):
 
-        files_str = [filename for filename in os.listdir("data")]
+        files_str = [filename for filename in os.listdir("../data")]
         s = f"""
 {self.header}
 Dostępne pliki:
